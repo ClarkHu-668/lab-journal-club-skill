@@ -1,0 +1,79 @@
+{
+  "primary_source": "20260702",
+  "reference_asset": "assets/reference.pptx",
+  "sources": [
+    {
+      "id": "20260702",
+      "filename": "胡庆林-20260702-生酮饮食通过β-羟基丁酸-螺旋形托马斯克拉维利亚菌-γδ17 T细胞轴在小鼠中加剧DSS诱导的结肠炎.pptx",
+      "sha256": "847060583c791098a73035d31023b78941250f57a05230ab541a33ee3b0e4cc6",
+      "slides": 37,
+      "size_inches": [
+        10.0,
+        7.5
+      ]
+    },
+    {
+      "id": "20260402",
+      "filename": "胡庆林-20260402-生酮饮食通过微生物肠肺轴缓解脓毒性肺损伤.pptx",
+      "sha256": "6f261f1ddf71ac0107a3c294cab553d4787d6826cb281b78bb71aa5b65e248e9",
+      "slides": 31,
+      "size_inches": [
+        10.0,
+        7.5
+      ]
+    },
+    {
+      "id": "20260514",
+      "filename": "胡庆林-20260514-临床试验中单次溶瘤病毒治疗后T细胞的持续激活和对胶质母细胞瘤的细胞毒性(1).pptx",
+      "sha256": "85bfe726be013585a70f5776346a11583c8f3cca141b00e580e86ed93ff29366",
+      "slides": 33,
+      "size_inches": [
+        10.0,
+        7.5
+      ]
+    },
+    {
+      "id": "20260624",
+      "filename": "胡庆林-20260624-生酮饮食通过β-羟基丁酸-螺旋形托马斯克拉维利亚菌-γδ17 T细胞轴在小鼠中加剧DSS诱导的结肠炎.pptx",
+      "sha256": "04f2a8b814a358456a9e70e391ef0548503661c24ee2528feb9c1536433b5dcd",
+      "slides": 23,
+      "size_inches": [
+        10.0,
+        7.5
+      ]
+    },
+    {
+      "id": "20260206",
+      "filename": "胡庆林-20260206-β-羟基丁酸分流途径产生抗肥胖酮代谢物.pptx",
+      "sha256": "0b9bec6bf81c9b2baea0be66d7ca98b2dbbc3a4c2083968da816081ec833b8b3",
+      "slides": 25,
+      "size_inches": [
+        10.0,
+        7.5
+      ]
+    },
+    {
+      "id": "20260115",
+      "filename": "胡庆林-20260115-来自肥胖内脏脂肪的细胞外囊泡促进胰腺癌的发展和对免疫检查点阻断疗法的抵抗.pptx",
+      "sha256": "26285afd90a5ea9f50d3589d928646b4e25d3d06b2297d008e14eed0d40ae8d5",
+      "slides": 30,
+      "size_inches": [
+        10.0,
+        7.5
+      ]
+    }
+  ],
+  "excluded_content_reference": {
+    "source": "20260624",
+    "reason": "封面为结肠炎论文，内页保留20260402脓毒症肺损伤文献内容；只佐证样式。",
+    "evidence_slides": {
+      "3": "脓毒症背景",
+      "5,21": "主干图仍讨论脓毒症肺损伤",
+      "7": "CLP存活率与肺损伤图注",
+      "8": "乳杆菌旧解释",
+      "16": "PPAR-γ药物旧注释",
+      "23": "壬二酸缓解脓毒症肺损伤总结"
+    }
+  },
+  "inspection": "All 179 source slides rendered. Six contact sheets and representative cover, author, rationale, roadmap, figure, question, answer and summary pages visually inspected. Source content is not evidence for a new paper."
+}
