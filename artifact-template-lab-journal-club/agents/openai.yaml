@@ -1,7 +1,7 @@
 interface:
   display_name: "组会文献汇报 Lab Journal Club"
-  short_description: "论文 PDF 或 Word 转组内模板 PPT，复用排版与缓存以减少重复消耗"
+  short_description: "按9月17日新版制作文献汇报，含原图解读、方法讲解和比较表，复用缓存"
   icon_large: "./assets/preview.png"
-  default_prompt: "请用 $artifact-template-lab-journal-club 把这篇论文制作成我们组风格的中文文献汇报 PPT，优先复用模板和论文原图。"
+  default_prompt: "请用 $artifact-template-lab-journal-club 按9月17日新版模板，把这篇论文做成中文文献汇报PPT，保留必要的模型讲解并优先复用原图与缓存。"
 policy:
   allow_implicit_invocation: true
