@@ -1,7 +1,18 @@
 {
-  "primary_source": "20260702",
+  "primary_source": "20260917",
   "reference_asset": "assets/reference.pptx",
   "sources": [
+    {
+      "id": "20260917",
+      "filename": "胡庆林-20260917-生酮饮食通过脂质而非酮体介导肠道肿瘤发生.pptx",
+      "sha256": "ded7b54edc8ddca9f2628667cbc0acec6f93245667b922fb1f817430f04392d3",
+      "slides": 59,
+      "size_inches": [
+        10,
+        7.5
+      ],
+      "role": "primary_style_and_narrative_reference"
+    },
     {
       "id": "20260702",
       "filename": "胡庆林-20260702-生酮饮食通过β-羟基丁酸-螺旋形托马斯克拉维利亚菌-γδ17 T细胞轴在小鼠中加剧DSS诱导的结肠炎.pptx",
@@ -10,7 +21,8 @@
       "size_inches": [
         10.0,
         7.5
-      ]
+      ],
+      "role": "historical_style_reference"
     },
     {
       "id": "20260402",
@@ -20,7 +32,8 @@
       "size_inches": [
         10.0,
         7.5
-      ]
+      ],
+      "role": "historical_style_reference"
     },
     {
       "id": "20260514",
@@ -30,7 +43,8 @@
       "size_inches": [
         10.0,
         7.5
-      ]
+      ],
+      "role": "historical_style_reference"
     },
     {
       "id": "20260624",
@@ -40,7 +54,8 @@
       "size_inches": [
         10.0,
         7.5
-      ]
+      ],
+      "role": "historical_style_reference"
     },
     {
       "id": "20260206",
@@ -50,7 +65,8 @@
       "size_inches": [
         10.0,
         7.5
-      ]
+      ],
+      "role": "historical_style_reference"
     },
     {
       "id": "20260115",
@@ -60,7 +76,8 @@
       "size_inches": [
         10.0,
         7.5
-      ]
+      ],
+      "role": "historical_style_reference"
     }
   ],
   "excluded_content_reference": {
@@ -75,5 +92,78 @@
       "23": "壬二酸缓解脓毒症肺损伤总结"
     }
   },
-  "inspection": "All 179 source slides rendered. Six contact sheets and representative cover, author, rationale, roadmap, figure, question, answer and summary pages visually inspected. Source content is not evidence for a new paper."
+  "inspection": "2026-09-17: all 59 slides rendered and visually reviewed across the team; source OOXML geometry/fonts measured; paper text/methods/figure legends and image-only tutorials reviewed. Historical 179-slide sources are superseded for default styling.",
+  "calibration_paper": {
+    "filename": "nature-Ketogenic diet mediates intestinal tumorigenesis through lipids not ketones.pdf",
+    "sha256": "63d5c73f4abe69331688d2a991274cb78c0d318f66485abeabf8a28d262992ea",
+    "pages": 32,
+    "purpose": "Calibrate panel selection, model explanations and narrative against the matching paper; not evidence for future papers.",
+    "retained_in_skill": false
+  },
+  "known_reference_issues": [
+    {
+      "slides": [
+        37
+      ],
+      "type": "wording",
+      "note": "Induction controls the exogenous Hmgcs2–mCherry cassette, not whether endogenous Hmgcs2 exists."
+    },
+    {
+      "slides": [
+        46
+      ],
+      "type": "diagram_label",
+      "note": "Intestinal cell versus hepatic mitochondrial/local-versus-systemic ketone labels need correction before any scientific reuse."
+    },
+    {
+      "slides": [
+        34,
+        47,
+        58,
+        59
+      ],
+      "type": "layout",
+      "note": "Local overflow, undersized question frames and overlapping appraisal text are not intended template behavior."
+    },
+    {
+      "slides": [
+        4,
+        5,
+        14,
+        59
+      ],
+      "type": "context_specific",
+      "note": "Other-study details, IF and lab-specific diet/project information cannot be verified from the supplied main paper alone and are not future defaults."
+    }
+  ],
+  "intentional_revisits": [
+    {
+      "slides": [
+        3,
+        11
+      ],
+      "purpose": "research rationale before and after background"
+    },
+    {
+      "slides": [
+        8,
+        34
+      ],
+      "purpose": "ketogenesis/ketolysis recap"
+    },
+    {
+      "slides": [
+        12,
+        58
+      ],
+      "purpose": "roadmap overview and recap"
+    },
+    {
+      "slides": [
+        19,
+        22
+      ],
+      "purpose": "return to evidence after model explanation"
+    }
+  ]
 }

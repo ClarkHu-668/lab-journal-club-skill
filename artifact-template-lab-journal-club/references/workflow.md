@@ -36,10 +36,12 @@ DOCX 输出段落、表格及单元格编号；manifest.media 提供内嵌图片
 
 在 `work/` 保存简短 `evidence.json`，每条包含 claim、source_location、figure/panels、比较组、必要统计条件，以及作者结论或汇报者评价。它是可追溯工作记录，不要整份塞入用户 PPT。
 
-按照 [plan-format.md](plan-format.md) 写 plan：
+按照 [plan-format.md](plan-format.md) 写 plan；默认沿用2026-09-17新版，规划需要时读取 [paper-to-slides.md](paper-to-slides.md)：
 
 - 封面：新论文中文标题、原始题录/论文头图、用户给出的汇报人及日期。缺题录图时使用原生文本题录。未给汇报人则省略姓名；未给日期时不沿用旧日期，使用当天日期并标明「制作日期」或省略。
-- 原图页：英文 Figure 标题、按实验问题选择的原图 panel、中文简释及必要结论。主文主要结果、决定结论的阴性结果和关键补充图都要合理覆盖。
+- 原图页：英文 Figure/Extended Data 标题、按实验问题选择的原图 panel、中文简释及必要结论。右侧讲解默认15pt、底部16pt；写清比较、结果和限制。主文主要结果、决定结论的阴性结果和关键补充图都要合理覆盖。
+- 方法/模型讲解：难以读懂的实验首次出现时插入 `explainer`，讲清组织、基因、诱导时机、对照与验证。优先当前论文现成示意或简短可编辑说明；复杂图按需生成，检查图中文字。讲解后可回原图，在notes注明目的并复用同一图像缓存。
+- 比较表：使用 `comparison` 原生表格。仅采用已核实且适用于当前文章或用户课题的资料；不要把参考中的饲料型号和跨研究IF列表自动沿用。
 - 回答页：在当前研究条件下能得出的回答，不能把相关性升级成证实机制。
 - 作者介绍和背景页：只有资料充分且有助于理解才加入。没有当前课题背景时不写成已经适用于用户课题。
 - `source`/notes：文件名、物理页或 Word 索引、图号和 panel，必要时补 DOI。样式来源与科学来源分开。
@@ -63,7 +65,7 @@ $env:RUNTIME_NODE_MODULES = $runtimeNodeModules
 & $runtimeNode "$skillDir/scripts/finalize_deck.mjs" --manifest "$taskDir/work/build/manifest.json" --workspace $taskDir --output "$taskDir/outputs/文献汇报.pptx" --presentations-skill $presentationsSkillDir --python $runtimePython
 ```
 
-若另外加入必须原生化的表格或图表，使用当前 Presentations 的完整 finalizer 配置声明相应 slide ownership 要求，不能把这些特殊要求当普通图页跳过。最终预览可在同版本下复用，无需为相同文件反复渲染。
+封装脚本对标准 `comparison` 页声明原生表格要求；若另外加入自定义表格、图表或机制对象，使用当前 Presentations 的完整 finalizer 配置声明对应 slide ownership，不能当普通图页跳过。最终预览可在同版本下复用，无需为相同文件反复渲染。
 
 查看每页最终渲染，确认图的可读性、黄色高亮、文本无裁切/遮挡，并对照新论文检查关键事实和来源。首次生成或全局版式修改检查全套；局部修订重点看受影响页，同时扫描整套一致性。PDF/DOCX 解析缓存和 plan 留在任务工作目录，下一次局部修改继续复用。
 
