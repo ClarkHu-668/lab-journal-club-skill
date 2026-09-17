@@ -21,16 +21,17 @@ if (source === args.output) throw new Error('Final output must differ from the d
 const validators = path.join(args['presentations-skill'],'container_tools');
 const {finalizePresentation} = await import(pathToFileURL(path.join(validators,'artifact_tool_utils.mjs')).href);
 const audit = path.join(args.workspace,'work','final-check',path.basename(args.output,'.pptx'));
+const tableOwners = manifest.slides.filter(s => s.type === 'comparison').map(s => s.number);
 await fs.mkdir(audit,{recursive:true});
 await fs.mkdir(path.dirname(args.output),{recursive:true});
 const result = await finalizePresentation({
   workspaceDir:args.workspace, candidatePath:source, finalPath:args.output,
   explicitTotalSlideCount:manifest.slideCount,
-  requiredNativeTableOwnerSlides:[], requiredNativeChartOwnerSlides:[],
+  requiredNativeTableOwnerSlides:tableOwners, requiredNativeChartOwnerSlides:[],
   pythonExecutable:args.python,
   integrityValidatorPath:path.join(validators,'inspect_presentation_package_integrity.py'),
   layoutValidatorPath:path.join(validators,'inspect_presentation_layout_geometry.py'),
-  layoutArgs:['--expected-slide-size-emu',manifest.expectedSlideSizeEmu,'--validate-bullet-geometry','--validate-heading-fit'],
+  layoutArgs:['--expected-slide-size-emu',manifest.expectedSlideSizeEmu,'--validate-bullet-geometry','--validate-heading-fit',...tableOwners.flatMap(number => ['--require-native-table-slide',String(number)])],
   fontPolicy:manifest.fontPolicy, verifyArtifactToolImport:true,
   receiptPath:path.join(audit,'validation.json'),
 });
